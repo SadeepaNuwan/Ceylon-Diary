@@ -37,15 +37,15 @@ export default function ContactSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-14">
           <p className="text-primary text-xs tracking-[0.3em] uppercase font-medium mb-3">Get in touch</p>
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">CONTACT US</h2>
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">CONTACT US</h2>
           <Separator className="w-12 mx-auto bg-primary mb-6" />
-          <p className="text-white/50 max-w-xl mx-auto">
+          <p className="text-white/50 max-w-xl mx-auto text-sm sm:text-base">
             Ready to start your Sri Lanka journey? Reach out on Telegram for the fastest response,
             or send us an email and we'll get back to you within 24 hours.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
           {channels.map(({ icon: Icon, label, sub, href, cardClass, iconClass }) => (
             <Card key={label} className={`transition-all ${cardClass}`}>
               <CardContent className="p-6">

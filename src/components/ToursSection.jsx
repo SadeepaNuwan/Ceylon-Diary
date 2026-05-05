@@ -29,14 +29,14 @@ export default function ToursSection({ onViewTour, searchQuery }) {
           <p className="text-primary text-xs tracking-[0.3em] uppercase font-medium mb-3">
             Discover Sri Lanka
           </p>
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
             POPULAR TOURS
           </h2>
           <Separator className="w-12 mx-auto bg-primary" />
         </div>
 
         {/* Category filters */}
-        <div className="flex flex-wrap gap-2 justify-center mb-12">
+        <div className="flex flex-wrap gap-2 justify-center mb-12 overflow-x-auto pb-2">
           {CATEGORIES.map((cat) => (
             <Button
               key={cat}
@@ -62,9 +62,9 @@ export default function ToursSection({ onViewTour, searchQuery }) {
 
         {/* Grid */}
         {filtered.length > 0 ? (
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-4">
             {filtered.map((tour, i) => (
-              <div key={tour.id} className="w-full sm:w-[calc(50%-8px)] lg:w-[calc(33.333%-11px)] xl:w-[calc(25%-12px)]">
+              <div key={tour.id}>
                 <TourCard tour={tour} index={i} onClick={onViewTour} />
               </div>
             ))}

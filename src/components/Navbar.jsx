@@ -37,7 +37,7 @@ export default function Navbar({ onSearch }) {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
         {/* Logo */}
-        <a href="#home" className="flex items-center gap-1.5 sm:gap-2">
+        <a href="#home" className="flex items-center gap-1 sm:gap-2">
           <img src={travelLogo} alt="Travel Logo" className="h-10 sm:h-14 w-auto" style={{ filter: 'brightness(0) invert(1)', opacity: 0.95 }} />
           <span className="font-display text-white text-lg sm:text-2xl tracking-widest font-semibold">Ceylon Diary</span>
         </a>
@@ -64,7 +64,7 @@ export default function Navbar({ onSearch }) {
                 value={searchVal}
                 onChange={(e) => setSearchVal(e.target.value)}
                 placeholder="Search tours…"
-                className="bg-white/10 border-white/20 text-white placeholder:text-white/40 w-28 sm:w-44 h-8 text-sm"
+                className="bg-white/10 border-white/20 text-white placeholder:text-white/40 w-32 sm:w-48 h-8 text-sm"
               />
               <Button
                 type="button"

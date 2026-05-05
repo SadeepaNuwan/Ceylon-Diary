@@ -35,11 +35,11 @@ export default function TestimonialsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-14">
           <p className="text-primary text-xs tracking-[0.3em] uppercase font-medium mb-3">Real stories</p>
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">TESTIMONIALS</h2>
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">TESTIMONIALS</h2>
           <Separator className="w-12 mx-auto bg-primary" />
         </div>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {testimonials.map((t) => (
             <Card key={t.name} className="bg-white/5 border-white/10 relative">
               <CardContent className="p-6">

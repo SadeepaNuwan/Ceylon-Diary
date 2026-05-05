@@ -20,7 +20,7 @@ export default function TourModal({ tour, onClose }) {
     <Sheet open={!!tour} onOpenChange={(open) => !open && onClose()}>
       <SheetContent
         side="right"
-        className="w-full sm:max-w-2xl p-0 border-l border-border bg-[#111] flex flex-col"
+        className="w-full sm:max-w-2xl p-0 border-l border-border bg-[#111] flex flex-col max-w-full"
       >
         {/* Visually hidden title for accessibility */}
         <SheetTitle className="sr-only">{tour.title}</SheetTitle>
@@ -28,7 +28,7 @@ export default function TourModal({ tour, onClose }) {
 
         <ScrollArea className="h-full w-full">
           {/* Hero image */}
-          <div className="relative h-64 shrink-0">
+          <div className="relative h-48 sm:h-64 shrink-0">
             <img src={tour.heroImage} alt={tour.title} className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#111] via-black/30 to-transparent" />
 

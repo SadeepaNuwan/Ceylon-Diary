@@ -22,6 +22,7 @@ export default function InspireSection() {
     }
   }, []);
 
+  
   const toggleMute = useCallback(() => {
     const newMuted = !isMuted;
     userWantsMuted.current = newMuted;
@@ -74,7 +75,12 @@ export default function InspireSection() {
 
       {/* YouTube video background (shown when playing) */}
       {isPlaying && (
-        <div className="absolute inset-0 overflow-hidden">
+        <div 
+          className="absolute inset-0 overflow-hidden"
+          style={{
+            aspectRatio: '16 / 9',
+          }}
+        >
           <iframe
             ref={iframeRef}
             src={`https://www.youtube.com/embed/${VIDEO_ID}?autoplay=1&mute=0&controls=0&loop=1&playlist=${VIDEO_ID}&rel=0&modestbranding=1&showinfo=0&enablejsapi=1&origin=${window.location.origin}`}
@@ -82,14 +88,13 @@ export default function InspireSection() {
             className="absolute"
             style={{
               border: 'none',
-              width: '177.78vh',
-              height: '56.25vw',
-              minWidth: '100%',
-              minHeight: '100%',
-              top: '50%',
-              left: '50%',
-              transform: 'translate(-50%, -50%)',
+              width: '100%',
+              height: '100%',
+              top: '0',
+              left: '0',
+              transform: 'none',
               pointerEvents: 'none',
+              objectFit: 'cover',
             }}
           />
         </div>
@@ -98,18 +103,18 @@ export default function InspireSection() {
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/60" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24 grid md:grid-cols-2 gap-10 sm:gap-16 items-center w-full">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24 grid grid-cols-1 md:grid-cols-2 gap-10 sm:gap-16 items-center w-full">
         {/* Left – text content */}
         <div className="flex flex-col justify-center">
           <p className="text-primary text-xs tracking-[0.3em] uppercase font-medium mb-4">
             Why travel with us
           </p>
-          <h2 className="font-display text-3xl sm:text-5xl md:text-6xl font-bold text-white leading-none mb-6">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-none mb-6">
             TRAVEL AND<br />
             INSPIRE YOUR<br />
             LIFE
           </h2>
-          <p className="text-white/60 leading-relaxed mb-8 max-w-md">
+          <p className="text-white/60 leading-relaxed mb-8 max-w-md text-sm sm:text-base">
             Sri Lanka packs ancient kingdoms, misty hill country, leopard-filled jungles and
             turquoise coastlines into one island. We've spent over a decade crafting tours that
             take you beyond the highlights — to the hidden temples, local families and wild
@@ -119,7 +124,7 @@ export default function InspireSection() {
           <Separator className="bg-white/10 mb-8" />
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {[
               { number: '6', label: 'Sri Lanka Tours' },
               { number: '980+', label: 'Happy Travellers' },
@@ -138,7 +143,7 @@ export default function InspireSection() {
           {!isPlaying ? (
             <button
               onClick={() => setIsPlaying(true)}
-              className="group relative flex items-center justify-center w-28 h-28 rounded-full border-2 border-white/30 bg-white/10 backdrop-blur-sm hover:bg-white/20 hover:border-white/60 transition-all duration-300 cursor-pointer"
+              className="group relative flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-full border-2 border-white/30 bg-white/10 backdrop-blur-sm hover:bg-white/20 hover:border-white/60 transition-all duration-300 cursor-pointer"
               aria-label="Play Sri Lanka cinematic video"
             >
               {/* Pulse ring */}

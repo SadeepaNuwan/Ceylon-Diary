@@ -40,17 +40,17 @@ export default function Hero({ onViewTour }) {
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20" />
 
       {/* Content */}
-      <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 flex flex-col justify-end pb-28 sm:pb-24 pt-24">
+      <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 flex flex-col justify-end pb-20 sm:pb-24 pt-24">
         <div className={`transition-all duration-500 ${animating ? 'opacity-0 translate-y-6' : 'opacity-100 translate-y-0'}`}>
           <p className="text-primary text-xs tracking-[0.3em] uppercase font-medium mb-3">
             {slide.region} · {slide.slideNumber} / {String(heroSlides.length).padStart(2, '0')}
           </p>
 
-          <h1 className="font-display text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-none mb-4 max-w-3xl">
+          <h1 className="font-display text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-none mb-4 max-w-3xl">
             {slide.title}
           </h1>
 
-          <p className="text-white/60 text-sm sm:text-base md:text-lg mb-4 sm:mb-6 max-w-md">{slide.subtitle}</p>
+          <p className="text-white/60 text-xs sm:text-sm md:text-base mb-4 sm:mb-6 max-w-md">{slide.subtitle}</p>
 
           <div className="flex flex-wrap items-center gap-5 mb-8">
             <span className="flex items-center gap-2 text-white/70 text-sm">
@@ -62,7 +62,7 @@ export default function Hero({ onViewTour }) {
           <Button
             size="lg"
             onClick={() => onViewTour(slide.id)}
-            className="tracking-widest uppercase text-sm px-8"
+            className="tracking-widest uppercase text-xs sm:text-sm px-6 sm:px-8 whitespace-nowrap"
           >
             Explore Package &nbsp;→
           </Button>
