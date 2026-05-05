@@ -5,10 +5,10 @@ const VIDEO_ID = 'OkLsh-4NokU';
 
 export default function InspireSection() {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [isMuted, setIsMuted] = useState(false);
+  const [isMuted, setIsMuted] = useState(true); // iOS requires starting muted for autoplay
   const iframeRef = useRef(null);
   const sectionRef = useRef(null);
-  const userWantsMuted = useRef(false); // tracks the user's manual mute preference
+  const userWantsMuted = useRef(true); // tracks the user's manual mute preference
 
   // Send mute/unmute command to YouTube iframe
   const sendMuteCommand = useCallback((shouldMute) => {
@@ -22,7 +22,6 @@ export default function InspireSection() {
     }
   }, []);
 
-  
   const toggleMute = useCallback(() => {
     const newMuted = !isMuted;
     userWantsMuted.current = newMuted;
@@ -78,13 +77,18 @@ export default function InspireSection() {
         <div 
           className="absolute inset-0 overflow-hidden"
           style={{
-            aspectRatio: '16 / 9',
+            width: '100%',
+            height: '100%',
+            top: 0,
+            left: 0,
           }}
         >
           <iframe
             ref={iframeRef}
-            src={`https://www.youtube.com/embed/${VIDEO_ID}?autoplay=1&mute=0&controls=0&loop=1&playlist=${VIDEO_ID}&rel=0&modestbranding=1&showinfo=0&enablejsapi=1&origin=${window.location.origin}`}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; autoplay"
+            src={`https://www.youtube.com/embed/${VIDEO_ID}?autoplay=1&mute=1&controls=0&loop=1&playlist=${VIDEO_ID}&rel=0&modestbranding=1&showinfo=0&enablejsapi=1&origin=${window.location.origin}`}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            webkitAllowFullScreen
             className="absolute"
             style={{
               border: 'none',
@@ -94,7 +98,6 @@ export default function InspireSection() {
               left: '0',
               transform: 'none',
               pointerEvents: 'none',
-              objectFit: 'cover',
             }}
           />
         </div>
