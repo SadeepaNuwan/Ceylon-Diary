@@ -1,0 +1,497 @@
+{
+  "telegramLink": "https://t.me/+94778477721",
+  "tours": [
+    {
+      "id": 1,
+      "title": "Island Grand Tour",
+      "country": "Sri Lanka",
+      "region": "Island-wide",
+      "tagline": "Sigiriya · Kandy · Nuwara Eliya · Ella · Yala · Mirissa · Galle",
+      "heroImage": "https://images.pexels.com/photos/18080584/pexels-photo-18080584.jpeg",
+      "cardImage": "https://images.pexels.com/photos/18080584/pexels-photo-18080584.jpeg",
+      "duration": "10 Days / 9 Nights",
+      "startDate": "Flexible – departs any day",
+      "groupSize": "2 – 12 people",
+      "category": "Full Circuit",
+      "highlights": [
+        {
+          "area": "Sigiriya",
+          "places": [
+            "Sigiriya Rock",
+            "Pidurangala Rock",
+            "Dambulla Cave Temple",
+            "Reswehera Temple"
+          ]
+        },
+        {
+          "area": "Kandy",
+          "places": [
+            "Kandy Temple",
+            "Peradeniya Botanical Garden",
+            "Bahirawakanda Temple",
+            "Kandy Dance",
+            "Ambuluwawa Tower",
+            "Pinnawala Elephant Activity"
+          ]
+        },
+        {
+          "area": "Nuwara Eliya",
+          "places": [
+            "Gregory Park",
+            "Hakgala Botanical Garden",
+            "Tea Factory Visit"
+          ]
+        },
+        {
+          "area": "Ella",
+          "places": [
+            "Nine Arches Bridge",
+            "Little Adam's Peak",
+            "Flying Rawana Adventure Park",
+            "Rawana Cave Temple",
+            "Rawana Waterfall"
+          ]
+        },
+        {
+          "area": "Yala National Park",
+          "places": [
+            "Yala National Park Safari (Leopards & Elephants)"
+          ]
+        },
+        {
+          "area": "Mirissa",
+          "places": [
+            "Secret Beach",
+            "Coconut Tree Hill",
+            "Parrot Rock",
+            "Whale Watching",
+            "Surfing at Mirissa Beach 🏄‍♀️"
+          ]
+        },
+        {
+          "area": "Galle",
+          "places": [
+            "Galle Fort",
+            "Sea Turtle Sanctuary",
+            "Madu Ganga Boat Safari",
+            "Moonstone Gem Shop"
+          ]
+        }
+      ],
+      "itinerary": [
+        {
+          "day": "Day 1",
+          "location": "Airport → Sigiriya",
+          "description": "Arrive at Bandaranaike International Airport. Transfer to Sigiriya (approx. 4 hrs). Check in and rest. Evening walk around the village."
+        },
+        {
+          "day": "Day 2",
+          "location": "Sigiriya",
+          "description": "Morning sunrise climb of Sigiriya Rock (UNESCO World Heritage). Hike Pidurangala Rock for panoramic views. Visit Dambulla Cave Temple – five cave shrines with over 150 Buddha statues. Evening: visit Reswehera Temple."
+        },
+        {
+          "day": "Day 3",
+          "location": "Kandy",
+          "description": "Drive to Kandy. Visit Kandy Temple of the Tooth Relic. Explore Peradeniya Botanical Garden (147 acres, over 4,000 species). Visit Bahirawakanda Temple with panoramic city views. Ambuluwawa Tower for 360° hill country views. Evening: Traditional Kandyan Dance performance. Visit Pinnawala Elephant Activity."
+        },
+        {
+          "day": "Day 4",
+          "location": "Nuwara Eliya",
+          "description": "Drive up through misty tea country to Nuwara Eliya. Visit Gregory Park with a boat ride on the lake. Explore Hakgala Botanical Garden – rose garden, orchid house, fern collection. Guided visit to a working Tea Factory – see how Ceylon Tea is grown, withered, rolled and dried."
+        },
+        {
+          "day": "Day 5",
+          "location": "Ella",
+          "description": "Scenic drive through rolling tea hills and waterfalls to Ella. Walk to the famous Nine Arches Bridge – spot a train crossing through the jungle canopy. Hike Little Adam's Peak for breathtaking views. Afternoon: Flying Rawana Adventure Park (zip-lining, archery). Visit Rawana Cave Temple and Rawana Waterfall (Rawana Ella Falls)."
+        },
+        {
+          "day": "Day 6",
+          "location": "Yala National Park",
+          "description": "Drive south to Yala. Full day game drive in Yala National Park – home to the highest leopard density in the world. Spot Sri Lankan leopards, wild elephants, sloth bears, crocodiles, spotted deer, water buffalo, peacocks and hundreds of bird species."
+        },
+        {
+          "day": "Day 7",
+          "location": "Mirissa",
+          "description": "Drive along the south coast to Mirissa. Pre-dawn whale watching boat – blue whales and sperm whales are frequently spotted off Mirissa. Explore Secret Beach (hidden cove). Visit Coconut Tree Hill (iconic photographic spot). Climb Parrot Rock for sweeping ocean views. You can also surf 🏄‍♀️ at Mirissa Beach."
+        },
+        {
+          "day": "Day 8",
+          "location": "Galle",
+          "description": "Drive to Galle. Explore the UNESCO-listed Galle Fort – lighthouse, ramparts, colonial streets. Visit a Sea Turtle hatchery & conservation centre. Madu Ganga Boat Safari through mangrove lagoon (cinnamon island, bird watching). Visit a Moonstone Gem Shop."
+        },
+        {
+          "day": "Day 9",
+          "location": "Galle → Airport",
+          "description": "Morning free to explore Galle Fort market and cafes. Drive along the coastal expressway to Colombo airport. Departure. End of trip – Safe travels!"
+        }
+      ],
+      "accommodation": [
+        {
+          "name": "Jetwing Vil Uyana",
+          "type": "5-star Eco Resort",
+          "location": "Sigiriya",
+          "nights": 2
+        },
+        {
+          "name": "Cinnamon Citadel",
+          "type": "4-star Resort",
+          "location": "Kandy",
+          "nights": 1
+        },
+        {
+          "name": "Heritance Tea Factory",
+          "type": "4-star Unique Hotel (inside a tea factory)",
+          "location": "Nuwara Eliya",
+          "nights": 1
+        },
+        {
+          "name": "98 Acres Resort & Spa",
+          "type": "5-star Boutique Resort",
+          "location": "Ella",
+          "nights": 1
+        },
+        {
+          "name": "Wild Coast Tented Lodge",
+          "type": "5-star Luxury Tented Camp",
+          "location": "Yala",
+          "nights": 1
+        },
+        {
+          "name": "Mirissa Hills",
+          "type": "4-star Boutique Hotel",
+          "location": "Mirissa",
+          "nights": 1
+        },
+        {
+          "name": "Amangalla",
+          "type": "5-star Heritage Hotel",
+          "location": "Galle Fort",
+          "nights": 2
+        }
+      ],
+      "guide": {
+        "name": "Chaminda Jayawardena",
+        "photo": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&q=80",
+        "languages": [
+          "English",
+          "Sinhala",
+          "Tamil",
+          "German"
+        ],
+        "experience": "14 years",
+        "about": "Chaminda is a licensed National Guide certified by the Sri Lanka Tourism Development Authority. With 14 years guiding island-wide circuits, he brings deep expertise in ancient kingdoms, wildlife, hill country culture and coastal life. He has escorted over 800 groups through Sri Lanka and knows every shortcut, hidden viewpoint and local gem on the route."
+      },
+      "included": [
+        "Daily breakfast & selected dinners",
+        "Private air-conditioned vehicle throughout",
+        "All entrance fees (Sigiriya, Dambulla, Kandy Temple, Peradeniya, Yala, etc.)",
+        "Yala National Park jeep safari",
+        "Whale watching boat, Mirissa",
+        "Madu Ganga boat safari",
+        "Tea factory tour",
+        "Pinnawala Elephant Activity entry",
+        "Airport pickup & drop-off"
+      ],
+      "customNote": "All tours can be arranged and customized according to the customer's satisfaction.",
+      "notIncluded": [
+        "International flights",
+        "Travel insurance",
+        "Personal expenses & tips",
+        "Visa fees",
+        "Kandyan dance show tickets",
+        "Flying Rawana Adventure Park (optional)",
+        "Surfing lessons (optional)",
+        "Alcohol & beverages beyond meals"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Wildlife Safari Circuit",
+      "country": "Sri Lanka",
+      "region": "Southern & Eastern",
+      "tagline": "Leopards, Elephants & Sloth Bears in the Wild",
+      "heroImage": " https://images.pexels.com/photos/33130315/pexels-photo-33130315.jpeg",
+      "cardImage": "https://images.pexels.com/photos/18960215/pexels-photo-18960215.jpeg",
+      "duration": "6 Days / 5 Nights",
+      "startDate": "Flexible – departs any day",
+      "groupSize": "2 – 8 people",
+      "category": "Wildlife & Safari",
+      "highlights": [
+        "Yala Leopard Safari",
+        "Udawalawe Elephant Transit Home",
+        "Minneriya Elephant Gathering",
+        "Wilpattu Lake Safari",
+        "Bundala Flamingos & Waders",
+        "Night Safari"
+      ],
+      "itinerary": [
+        {
+          "day": "Day 1",
+          "location": "Airport → Udawalawe",
+          "description": "Drive south. Afternoon Elephant Transit Home visit (feeding at 3pm & 6pm)."
+        },
+        {
+          "day": "Day 2",
+          "location": "Udawalawe",
+          "description": "Full day Udawalawe National Park – 200+ elephants, water buffalo, crocodiles and eagles."
+        },
+        {
+          "day": "Day 3",
+          "location": "Yala",
+          "description": "Morning game drive in Yala Block 1 – leopards, sloth bears, elephants and saltwater crocodiles."
+        },
+        {
+          "day": "Day 4",
+          "location": "Yala",
+          "description": "Dawn and dusk game drives. Highest leopard density per km² in the world."
+        },
+        {
+          "day": "Day 5",
+          "location": "Bundala",
+          "description": "Bundala National Park – flamingos, painted storks and rare migratory birds."
+        },
+        {
+          "day": "Day 6",
+          "location": "Minneriya → Airport",
+          "description": "Minneriya elephant gathering safari, then transfer to airport. Departure."
+        }
+      ],
+      "accommodation": [
+        {
+          "name": "Kalu's Hideaway",
+          "type": "4-star Safari Lodge",
+          "location": "Udawalawe",
+          "nights": 1
+        },
+        {
+          "name": "Wild Coast Tented Lodge",
+          "type": "5-star Luxury Tented Camp",
+          "location": "Yala",
+          "nights": 3
+        },
+        {
+          "name": "Habarana Village by Cinnamon",
+          "type": "4-star Eco Lodge",
+          "location": "Minneriya",
+          "nights": 1
+        }
+      ],
+      "guide": {
+        "name": "Ruwan Perera",
+        "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
+        "languages": [
+          "English",
+          "Sinhala",
+          "Tamil"
+        ],
+        "experience": "13 years",
+        "about": "Ruwan is a wildlife biologist and certified tracker who has contributed to the Sri Lanka Leopard Research Project. He is exceptional at locating leopards and knows Yala Block 1 like the back of his hand. Featured in BBC Wildlife Magazine."
+      },
+      "included": [
+        "Daily breakfast & all camp meals",
+        "All park entrance fees",
+        "Jeep safari charges",
+        "Elephant Transit Home entry"
+      ],
+      "notIncluded": [
+        "International flights",
+        "Travel insurance",
+        "Personal expenses",
+        "Alcohol"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "East Coast & Trincomalee",
+      "country": "Sri Lanka",
+      "region": "Eastern Province",
+      "tagline": "Untouched Beaches, Diving & Blue Whale Hotspots",
+      "heroImage": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=100&w=1920&auto=format&fit=crop",
+      "cardImage": "https://images.unsplash.com/photo-1519046904884-53103b34b206?q=100&w=1920&auto=format&fit=crop",
+      "duration": "7 Days / 6 Nights",
+      "startDate": "Coming Soon – May to September",
+      "groupSize": "2 – 8 people",
+      "category": "Beach & Leisure",
+      "highlights": [
+        "Pigeon Island Diving & Snorkelling",
+        "Trincomalee Natural Harbour",
+        "Nilaveli White Sand Beach",
+        "Koneswaram Temple on the Cliff",
+        "Kalkudah Bay",
+        "Whale Watching off Trinco"
+      ],
+      "itinerary": [
+        {
+          "day": "Day 1",
+          "location": "Airport → Trincomalee",
+          "description": "Fly or drive to Trinco. Koneswaram temple cliffside sunset. Check in at beach resort."
+        },
+        {
+          "day": "Day 2",
+          "location": "Trincomalee",
+          "description": "Trinco natural harbour boat tour, Fort Frederick, whale watching excursion (Apr–Sep)."
+        },
+        {
+          "day": "Day 3–4",
+          "location": "Nilaveli",
+          "description": "Pigeon Island National Park – snorkelling and diving with blacktip reef sharks, turtles and colourful coral."
+        },
+        {
+          "day": "Day 5",
+          "location": "Passekudah / Kalkudah",
+          "description": "Drive south to Passekudah – the calmest, clearest bay in Sri Lanka. Kayaking and paddleboarding."
+        },
+        {
+          "day": "Day 6",
+          "location": "Batticaloa",
+          "description": "Batticaloa lagoon boat tour, singing fish lagoon, Batticaloa Fort. Local seafood dinner."
+        },
+        {
+          "day": "Day 7",
+          "location": "Return → Airport",
+          "description": "Beach morning at Kalkudah, then drive to Colombo or fly from Batticaloa. Departure."
+        }
+      ],
+      "accommodation": [
+        {
+          "name": "Jungle Beach by Uga Escapes",
+          "type": "5-star Eco Luxury",
+          "location": "Trincomalee",
+          "nights": 2
+        },
+        {
+          "name": "Nilaveli Beach Hotel",
+          "type": "4-star Beachfront Resort",
+          "location": "Nilaveli",
+          "nights": 2
+        },
+        {
+          "name": "Maalu Maalu Resort",
+          "type": "4-star Beach Resort",
+          "location": "Passekudah",
+          "nights": 2
+        }
+      ],
+      "guide": {
+        "name": "Nilan Selvam",
+        "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80",
+        "languages": [
+          "English",
+          "Tamil",
+          "Sinhala"
+        ],
+        "experience": "8 years",
+        "about": "Nilan is a PADI-certified divemaster born in Trincomalee. He knows every dive site along the east coast and has a passion for marine conservation and local Tamil culture and cuisine."
+      },
+      "included": [
+        "All accommodation",
+        "Daily breakfast & 3 dinners",
+        "Pigeon Island boat & snorkel gear",
+        "Whale watching excursion",
+        "Batticaloa lagoon boat",
+        "All transport",
+        "Expert dive guide"
+      ],
+      "notIncluded": [
+        "International flights",
+        "Scuba diving (optional, extra charge)",
+        "Travel insurance",
+        "Personal expenses"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Cultural Triangle Express",
+      "country": "Sri Lanka",
+      "region": "North Central",
+      "tagline": "Ancient Kingdoms, Rock Fortresses & Cave Temples",
+      "heroImage": "https://images.unsplash.com/photo-1665849050332-8d5d7e59afb6?q=100&w=1920&auto=format&fit=crop",
+      "cardImage": "https://images.pexels.com/photos/36638354/pexels-photo-36638354.jpeg",
+      "duration": "5 Days / 4 Nights",
+      "startDate": "Coming Soon",
+      "groupSize": "2 – 10 people",
+      "category": "Heritage & Culture",
+      "highlights": [
+        "Sigiriya Lion Rock (UNESCO)",
+        "Dambulla Cave Temple",
+        "Polonnaruwa Ancient City",
+        "Anuradhapura Sacred City",
+        "Minneriya Elephant Gathering",
+        "Village Cycle Tour"
+      ],
+      "itinerary": [
+        {
+          "day": "Day 1",
+          "location": "Airport → Dambulla",
+          "description": "Arrive and transfer to Dambulla. Evening visit to the Golden Cave Temple."
+        },
+        {
+          "day": "Day 2",
+          "location": "Sigiriya",
+          "description": "Sunrise climb of Sigiriya Lion Rock fortress. Afternoon Pidurangala Rock hike."
+        },
+        {
+          "day": "Day 3",
+          "location": "Polonnaruwa",
+          "description": "Full day exploring the ancient Polonnaruwa ruins – Gal Vihara, Royal Palace, Lotus Pond."
+        },
+        {
+          "day": "Day 4",
+          "location": "Anuradhapura",
+          "description": "Sacred Anuradhapura – Sri Maha Bodhi tree, Ruwanwelisaya Stupa. Minneriya evening elephant safari."
+        },
+        {
+          "day": "Day 5",
+          "location": "Return → Airport",
+          "description": "Morning village cycle tour, then transfer to airport. Departure."
+        }
+      ],
+      "accommodation": [
+        {
+          "name": "Water Garden Sigiriya",
+          "type": "5-star Boutique Resort",
+          "location": "Sigiriya",
+          "nights": 2
+        },
+        {
+          "name": "The Long House",
+          "type": "Heritage Boutique Hotel",
+          "location": "Polonnaruwa",
+          "nights": 1
+        },
+        {
+          "name": "Ulagalla Resort",
+          "type": "5-star Eco Luxury",
+          "location": "Anuradhapura",
+          "nights": 1
+        }
+      ],
+      "guide": {
+        "name": "Pradeep Rathnayake",
+        "photo": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80",
+        "languages": [
+          "English",
+          "Sinhala",
+          "Japanese"
+        ],
+        "experience": "11 years",
+        "about": "Pradeep specialises in the Cultural Triangle and has guided over 500 tours to the ancient kingdoms. His knowledge of Buddhist archaeology and Sinhala history brings each site vividly to life."
+      },
+      "included": [
+        "All accommodation",
+        "Daily breakfast & 2 dinners",
+        "Private A/C vehicle",
+        "All entrance fees",
+        "Minneriya jeep safari",
+        "Licensed national guide"
+      ],
+      "notIncluded": [
+        "International flights",
+        "Travel insurance",
+        "Personal expenses",
+        "Lunch"
+      ]
+    }
+    
+  ]
+}
