@@ -1,11 +1,14 @@
 import { useState, useEffect, useCallback } from 'react';
 import { FaChevronLeft, FaChevronRight, FaClock } from 'react-icons/fa';
 import { Button } from '@/components/ui/button';
-import { heroSlides } from '../data/tours';
+import { useTours } from '../data/tours';
+import { useTranslation } from 'react-i18next';
 
 export default function Hero({ onViewTour }) {
   const [current, setCurrent] = useState(0);
   const [animating, setAnimating] = useState(false);
+  const { heroSlides } = useTours();
+  const { t } = useTranslation();
 
   const go = useCallback(
     (next) => {
@@ -30,27 +33,30 @@ export default function Hero({ onViewTour }) {
   const slide = heroSlides[current];
 
   return (
-    <section id="home" className="relative h-screen min-h-[500px] sm:min-h-[600px] overflow-hidden">
+    <section id="home" className="relative h-[100svh] min-h-[560px] sm:min-h-[640px] overflow-hidden">
       {/* Background image */}
       <div
         className={`absolute inset-0 bg-cover bg-center transition-opacity duration-500 ${animating ? 'opacity-0' : 'opacity-100'}`}
         style={{ backgroundImage: `url(${slide.image})` }}
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-black/10" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/45 to-black/10" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-black/30" />
 
       {/* Content */}
-      <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 flex flex-col justify-end pb-20 sm:pb-24 pt-24">
+      <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 flex flex-col justify-end pb-20 sm:pb-24 pt-28 sm:pt-32">
         <div className={`transition-all duration-500 ${animating ? 'opacity-0 translate-y-6' : 'opacity-100 translate-y-0'}`}>
-          <p className="text-primary text-xs tracking-[0.3em] uppercase font-medium mb-3">
+          <p className="text-primary text-[10px] sm:text-xs tracking-[0.3em] uppercase font-medium mb-3">
             {slide.region} · {slide.slideNumber} / {String(heroSlides.length).padStart(2, '0')}
           </p>
 
-          <h1 className="font-display text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-none mb-4 max-w-3xl">
-            {slide.title}
+          <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-[0.92] mb-5 max-w-4xl tracking-tight">
+            {t('hero.title1')}<br/>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/60">
+              {t('hero.title2')}
+            </span>
           </h1>
 
-          <p className="text-white/60 text-xs sm:text-sm md:text-base mb-4 sm:mb-6 max-w-md">{slide.subtitle}</p>
+          <p className="text-white/70 text-sm sm:text-base md:text-lg mb-5 sm:mb-6 max-w-xl leading-relaxed">{t('hero.subtitle')}</p>
 
           <div className="flex flex-wrap items-center gap-5 mb-8">
             <span className="flex items-center gap-2 text-white/70 text-sm">
@@ -62,9 +68,9 @@ export default function Hero({ onViewTour }) {
           <Button
             size="lg"
             onClick={() => onViewTour(slide.id)}
-            className="tracking-widest uppercase text-xs sm:text-sm px-6 sm:px-8 whitespace-nowrap"
+            className="min-h-11 tracking-widest uppercase text-xs sm:text-sm px-6 sm:px-8 whitespace-nowrap"
           >
-            Explore Package &nbsp;→
+            {t('hero.explore')} &nbsp;→
           </Button>
         </div>
       </div>
@@ -88,7 +94,7 @@ export default function Hero({ onViewTour }) {
       </div>
 
       {/* Arrow controls */}
-      <div className="absolute bottom-20 sm:bottom-8 right-4 sm:right-8 flex gap-2">
+      <div className="absolute bottom-6 sm:bottom-8 right-4 sm:right-8 hidden sm:flex gap-2">
         <Button
           variant="outline"
           size="icon"

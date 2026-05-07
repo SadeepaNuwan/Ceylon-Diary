@@ -1,65 +1,88 @@
-import { FaTelegramPlane, FaEnvelope, FaPhone } from 'react-icons/fa';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
+import { FaTelegramPlane, FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 import { Separator } from '@/components/ui/separator';
 import { TELEGRAM_LINK } from '../data/tours';
 
 export default function ContactSection() {
+  const { t } = useTranslation();
+
   const channels = [
     {
       icon: FaTelegramPlane,
-      label: 'Telegram',
-      sub: 'Fastest response · 2 hrs',
+      label: t('contact.telegram.label', 'Telegram'),
+      sub: t('contact.telegram.sub', 'Fastest response · 2 hrs'),
       href: TELEGRAM_LINK,
-      cardClass: 'bg-[#229ED9]/10 border-[#229ED9]/30 hover:bg-[#229ED9]/20',
-      iconClass: 'bg-[#229ED9]',
+      gradient: 'from-[#229ED9]/10 to-transparent',
+      glow: 'group-hover:shadow-[0_0_40px_-10px_rgba(34,158,217,0.3)]',
+      iconColor: 'text-[#229ED9]',
+      borderColor: 'group-hover:border-[#229ED9]/50',
     },
     {
       icon: FaEnvelope,
-      label: 'Email',
+      label: t('contact.email.label', 'Email'),
       sub: 'hello@travelco.com',
       href: 'mailto:hello@travelco.com',
-      cardClass: 'bg-white/5 border-white/10 hover:border-primary/50',
-      iconClass: 'bg-primary',
+      gradient: 'from-primary/10 to-transparent',
+      glow: 'group-hover:shadow-[0_0_40px_-10px_rgba(232,93,4,0.3)]',
+      iconColor: 'text-primary',
+      borderColor: 'group-hover:border-primary/50',
     },
     {
-      icon: FaPhone,
-      label: 'Phone',
+      icon: FaPhoneAlt,
+      label: t('contact.phone.label', 'Phone'),
       sub: '+94 77 123 4567',
       href: 'tel:+94771234567',
-      cardClass: 'bg-white/5 border-white/10 hover:border-white/30',
-      iconClass: 'bg-white/10',
+      gradient: 'from-white/5 to-transparent',
+      glow: 'group-hover:shadow-[0_0_40px_-10px_rgba(255,255,255,0.15)]',
+      iconColor: 'text-white/80',
+      borderColor: 'group-hover:border-white/30',
     },
   ];
 
   return (
-    <section id="contact" className="py-24 bg-black">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="text-center mb-14">
-          <p className="text-primary text-xs tracking-[0.3em] uppercase font-medium mb-3">Get in touch</p>
-          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">CONTACT US</h2>
+    <section id="contact" className="py-24 bg-black relative overflow-hidden">
+      {/* Background glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-64 bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+        <div className="text-center mb-16 max-w-2xl mx-auto">
+          <p className="text-primary text-xs tracking-[0.3em] uppercase font-medium mb-4">
+            {t('contact.tagline', 'Get in touch')}
+          </p>
+          <h2 className="font-display text-4xl sm:text-5xl font-bold text-white mb-6">
+            {t('contact.title', 'CONTACT US')}
+          </h2>
           <Separator className="w-12 mx-auto bg-primary mb-6" />
-          <p className="text-white/50 max-w-xl mx-auto text-sm sm:text-base">
-            Ready to start your Sri Lanka journey? Reach out on Telegram for the fastest response,
-            or send us an email and we'll get back to you within 24 hours.
+          <p className="text-white/60 text-sm leading-relaxed">
+            {t('contact.description')}
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
-          {channels.map(({ icon: Icon, label, sub, href, cardClass, iconClass }) => (
-            <Card key={label} className={`transition-all ${cardClass}`}>
-              <CardContent className="p-6">
-                <Button variant="ghost" size="icon" className="h-12 w-12 p-0 mb-4 hover:bg-transparent" asChild>
-                  <a href={href} target="_blank" rel="noopener noreferrer">
-                    <span className={`w-12 h-12 ${iconClass} flex items-center justify-center`}>
-                      <Icon className="text-white text-lg" />
-                    </span>
-                  </a>
-                </Button>
-                <p className="text-white font-semibold mb-1">{label}</p>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          {channels.map(({ icon: Icon, label, sub, href, gradient, glow, iconColor, borderColor }) => (
+            <a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`group relative flex flex-col items-center text-center p-8 rounded-2xl bg-[#111]/80 backdrop-blur-md border border-white/5 transition-all duration-500 hover:-translate-y-2 ${glow} ${borderColor}`}
+            >
+              {/* Subtle top gradient */}
+              <div className={`absolute inset-0 bg-gradient-to-b ${gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl`} />
+
+              <div className="relative mb-6">
+                <div className={`w-14 h-14 rounded-full bg-white/5 flex items-center justify-center border border-white/10 group-hover:scale-110 transition-transform duration-500`}>
+                  <Icon className={`text-2xl ${iconColor}`} />
+                </div>
+              </div>
+              
+              <div>
+                <p className="text-white font-semibold mb-1 group-hover:text-primary transition-colors">
+                  {label}
+                </p>
                 <p className="text-white/40 text-xs">{sub}</p>
-              </CardContent>
-            </Card>
+              </div>
+            </a>
           ))}
         </div>
       </div>

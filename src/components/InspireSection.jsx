@@ -1,5 +1,6 @@
-import { useState, useRef, useCallback, useEffect } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { Separator } from '@/components/ui/separator';
+import { useTranslation } from 'react-i18next';
 
 const VIDEO_ID = 'OkLsh-4NokU';
 
@@ -9,6 +10,7 @@ export default function InspireSection() {
   const iframeRef = useRef(null);
   const sectionRef = useRef(null);
   const userWantsMuted = useRef(true); // tracks the user's manual mute preference
+  const { t } = useTranslation();
 
   // Send mute/unmute command to YouTube iframe
   const sendMuteCommand = useCallback((shouldMute) => {
@@ -65,7 +67,7 @@ export default function InspireSection() {
     <section ref={sectionRef} id="about" className="relative min-h-[70vh] sm:min-h-[85vh] flex items-center overflow-hidden">
       {/* Background layer */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-fixed transition-opacity duration-700"
+        className="absolute inset-0 bg-cover bg-center bg-scroll md:bg-fixed transition-opacity duration-700"
         style={{
           backgroundImage: `url(https://img.youtube.com/vi/${VIDEO_ID}/maxresdefault.jpg)`,
           opacity: isPlaying ? 0 : 1,
@@ -103,39 +105,36 @@ export default function InspireSection() {
         </div>
       )}
 
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/60" />
+      {/* Dark overlay with richer gradient */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-black/40" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24 grid grid-cols-1 md:grid-cols-2 gap-10 sm:gap-16 items-center w-full">
         {/* Left – text content */}
         <div className="flex flex-col justify-center">
           <p className="text-primary text-xs tracking-[0.3em] uppercase font-medium mb-4">
-            Why travel with us
+            {t('inspire.tagline', 'Why travel with us')}
           </p>
-          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-none mb-6">
-            TRAVEL AND<br />
-            INSPIRE YOUR<br />
-            LIFE
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-6">
+            {t('inspire.title1', 'TRAVEL AND')}<br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/60">{t('inspire.title2', 'INSPIRE YOUR')}</span><br />
+            {t('inspire.title3', 'LIFE')}
           </h2>
           <p className="text-white/60 leading-relaxed mb-8 max-w-md text-sm sm:text-base">
-            Sri Lanka packs ancient kingdoms, misty hill country, leopard-filled jungles and
-            turquoise coastlines into one island. We've spent over a decade crafting tours that
-            take you beyond the highlights — to the hidden temples, local families and wild
-            corners that most visitors never find.
+            {t('inspire.description')}
           </p>
 
           <Separator className="bg-white/10 mb-8" />
 
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+          {/* Premium Glassmorphic Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
             {[
-              { number: '6', label: 'Sri Lanka Tours' },
-              { number: '980+', label: 'Happy Travellers' },
-              { number: '12', label: 'Years in Sri Lanka' },
+              { number: '6', label: t('inspire.stats.tours', 'Sri Lanka Tours') },
+              { number: '980+', label: t('inspire.stats.travellers', 'Happy Travellers') },
+              { number: '12', label: t('inspire.stats.experience', 'Years Experience') },
             ].map((s) => (
-              <div key={s.label}>
-                <p className="font-display text-3xl font-bold text-primary">{s.number}</p>
-                <p className="text-white/50 text-xs tracking-wider uppercase mt-1">{s.label}</p>
+              <div key={s.label} className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-4 sm:p-5 hover:-translate-y-1 hover:border-primary/30 transition-all duration-300">
+                <p className="font-display text-3xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-white to-white/50 mb-1">{s.number}</p>
+                <p className="text-primary text-[9px] sm:text-[10px] tracking-[0.2em] uppercase font-semibold">{s.label}</p>
               </div>
             ))}
           </div>
@@ -146,14 +145,14 @@ export default function InspireSection() {
           {!isPlaying ? (
             <button
               onClick={() => setIsPlaying(true)}
-              className="group relative flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-full border-2 border-white/30 bg-white/10 backdrop-blur-sm hover:bg-white/20 hover:border-white/60 transition-all duration-300 cursor-pointer"
+              className="group relative flex items-center justify-center w-18 h-18 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-full border-2 border-white/30 bg-white/10 backdrop-blur-sm hover:bg-white/20 hover:border-white/60 transition-all duration-300 cursor-pointer"
               aria-label="Play Sri Lanka cinematic video"
             >
               {/* Pulse ring */}
               <span className="absolute inset-0 rounded-full border border-white/20 animate-ping" />
               {/* Play icon */}
               <svg
-                className="w-12 h-12 text-white ml-2 group-hover:scale-110 transition-transform duration-200"
+                className="w-8 h-8 sm:w-12 sm:h-12 text-white ml-1 sm:ml-2 group-hover:scale-110 transition-transform duration-200"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -190,7 +189,7 @@ export default function InspireSection() {
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
                 </svg>
-                Stop video
+                {t('inspire.stopVideo', 'Stop video')}
               </button>
             </div>
           )}

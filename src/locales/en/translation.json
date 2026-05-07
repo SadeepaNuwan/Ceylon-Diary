@@ -1,0 +1,117 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "destinations": "Destinations",
+    "tours": "Tours",
+    "gallery": "Gallery",
+    "contact": "Contact",
+    "switchToEnglish": "SWITCH TO ENGLISH",
+    "switchToRussian": "SWITCH TO RUSSIAN",
+    "exploreSriLanka": "Explore Sri Lanka"
+  },
+  "hero": {
+    "title1": "SRI LANKA",
+    "title2": "BEYOND THE ORDINARY",
+    "subtitle": "Curated journeys through ancient kingdoms, untamed wildlife, and misty tea hills.",
+    "explore": "Explore Packages",
+    "watch": "Watch Story"
+  },
+  "inspire": {
+    "tagline": "Why travel with us",
+    "title1": "TRAVEL AND",
+    "title2": "INSPIRE YOUR",
+    "title3": "LIFE",
+    "description": "Sri Lanka packs ancient kingdoms, misty hill country, leopard-filled jungles and turquoise coastlines into one island. We've spent over a decade crafting tours that take you beyond the highlights — to the hidden temples, local families and wild corners that most visitors never find.",
+    "stats": {
+      "tours": "Sri Lanka Tours",
+      "travellers": "Happy Travellers",
+      "experience": "Years Experience"
+    },
+    "stopVideo": "Stop video"
+  },
+  "tours": {
+    "tagline": "Discover Sri Lanka",
+    "title": "POPULAR TOURS",
+    "categories": {
+      "All": "ALL",
+      "Full Circuit": "FULL CIRCUIT",
+      "Wildlife & Safari": "WILDLIFE & SAFARI",
+      "Beach & Leisure": "BEACH & LEISURE",
+      "Heritage & Culture": "HERITAGE & CULTURE"
+    },
+    "card": {
+      "comingSoon": "Coming Soon",
+      "viewPackage": "View Package"
+    },
+    "modal": {
+      "book": "Enquire on Telegram",
+      "downloadItinerary": "View Detailed Itinerary",
+      "duration": "Duration",
+      "groupSize": "Group Size",
+      "departures": "Departures",
+      "highlights": "Highlights",
+      "itinerary": "Itinerary",
+      "included": "Included",
+      "notIncluded": "Not Included",
+      "yourGuide": "Your Guide",
+      "accommodation": "Accommodation",
+      "day": "Day",
+      "experience": "years experience",
+      "telegramNote": "Our travel expert will respond within 2 hours on Telegram"
+    }
+  },
+  "gallery": {
+    "tagline": "Captured moments",
+    "title": "GALLERY",
+    "captions": {
+      "sigiriya": "Sigiriya Rock Fortress",
+      "ella": "Nine Arch Bridge, Ella",
+      "tea_estates": "Tea Estates, Nuwara Eliya",
+      "down_south": "Down South",
+      "wildlife": "Wildlife and Safari",
+      "east_coast": "East Coast, Trincomalee"
+    }
+  },
+  "testimonials": {
+    "tagline": "Real stories",
+    "title": "TESTIMONIALS",
+    "reviews": {
+      "clarke": {
+        "tour": "Ancient Heritage Full Circle",
+        "text": "Sri Lanka blew us away — and this tour showed us sides of the island we'd never have found alone. Chamara's knowledge of the ancient kingdoms was extraordinary. Sigiriya at sunrise with no crowds was a highlight of our lives."
+      },
+      "ferrari": {
+        "tour": "Wildlife Safari Circuit",
+        "text": "We spotted 7 leopards in two days at Yala — Ruwan knew exactly where to look. The Wild Coast Tented Lodge was unbelievably luxurious. I've done safaris in Africa; Sri Lanka's wildlife is in a different league for intimacy."
+      },
+      "nambiar": {
+        "tour": "Hill Country & Tea",
+        "text": "The train ride from Ella through the tea country is the most scenic journey I've ever taken. Staying inside the Heritance Tea Factory hotel was such a unique experience. Pradeep made every stop feel like a discovery."
+      }
+    }
+  },
+  "contact": {
+    "tagline": "Get in touch",
+    "title": "CONTACT US",
+    "description": "Ready to start your Sri Lanka journey? Reach out on Telegram for the fastest response, or send us an email and we'll get back to you within 24 hours.",
+    "telegram": {
+      "label": "Telegram",
+      "sub": "Fastest response · 2 hrs"
+    },
+    "email": {
+      "label": "Email"
+    },
+    "phone": {
+      "label": "Phone"
+    }
+  },
+  "footer": {
+    "rights": "Ceylon Diary Tours · Sri Lanka. All rights reserved.",
+    "links": {
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "cookies": "Cookies"
+    }
+  }
+}

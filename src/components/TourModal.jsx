@@ -11,7 +11,10 @@ import { Separator } from '@/components/ui/separator';
 import { Card, CardContent } from '@/components/ui/card';
 import { TELEGRAM_LINK } from '../data/tours';
 
+import { useTranslation } from 'react-i18next';
+
 export default function TourModal({ tour, onClose }) {
+  const { t } = useTranslation();
   if (!tour) return null;
 
   const telegramUrl = `${TELEGRAM_LINK}?start=tour_${tour.id}`;
@@ -44,12 +47,12 @@ export default function TourModal({ tour, onClose }) {
 
             <Badge className="absolute top-4 left-4 text-[10px]">{tour.category}</Badge>
 
-            <div className="absolute bottom-0 left-0 right-0 p-6">
+            <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6">
               <p className="text-primary text-[10px] tracking-widest uppercase mb-1">
                 <FaMapMarkerAlt className="inline mr-1" />
-                Sri Lanka · {tour.region}
+                {t('hero.title1', 'Sri Lanka')} · {tour.region}
               </p>
-              <h2 className="font-display text-3xl font-bold text-white">{tour.title}</h2>
+              <h2 className="font-display text-2xl sm:text-3xl font-bold text-white">{tour.title}</h2>
               <p className="text-white/60 text-sm mt-1">{tour.tagline}</p>
             </div>
           </div>
@@ -59,9 +62,9 @@ export default function TourModal({ tour, onClose }) {
             {/* Quick stats */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
               {[
-                { icon: FaClock, label: 'Duration', value: tour.duration },
-                { icon: FaUsers, label: 'Group Size', value: tour.groupSize },
-                { icon: FaCalendarAlt, label: 'Departures', value: tour.startDate },
+                { icon: FaClock, label: t('tours.modal.duration', 'Duration'), value: tour.duration },
+                { icon: FaUsers, label: t('tours.modal.groupSize', 'Group Size'), value: tour.groupSize },
+                { icon: FaCalendarAlt, label: t('tours.modal.departures', 'Departures'), value: tour.startDate },
               ].map(({ icon: Icon, label, value }) => (
                 <Card key={label} className="bg-white/5 border-white/10">
                   <CardContent className="p-3">
@@ -76,13 +79,13 @@ export default function TourModal({ tour, onClose }) {
             {/* Enquire CTA */}
             <Button size="lg" className="w-full tracking-widest uppercase" asChild>
               <a href={telegramUrl} target="_blank" rel="noopener noreferrer">
-                <FaTelegramPlane /> Enquire on Telegram
+                <FaTelegramPlane /> {t('tours.modal.book', 'Enquire on Telegram')}
               </a>
             </Button>
 
             {/* Highlights */}
             <div>
-              <SectionHeading>Tour Highlights</SectionHeading>
+              <SectionHeading>{t('tours.modal.highlights', 'Tour Highlights')}</SectionHeading>
               {Array.isArray(tour.highlights) && tour.highlights.length > 0 && typeof tour.highlights[0] === 'object' && tour.highlights[0].area ? (
                 <div className="space-y-4">
                   {tour.highlights.map((group) => (
@@ -116,7 +119,7 @@ export default function TourModal({ tour, onClose }) {
 
             {/* Day-by-day itinerary */}
             <div>
-              <SectionHeading>Day-by-Day Itinerary</SectionHeading>
+              <SectionHeading>{t('tours.modal.itinerary', 'Day-by-Day Itinerary')}</SectionHeading>
               <div className="relative pl-6">
                 <div className="absolute left-2 top-2 bottom-2 w-px bg-white/10" />
                 <div className="space-y-5">
@@ -137,7 +140,7 @@ export default function TourModal({ tour, onClose }) {
 
             {/* Accommodation */}
             <div>
-              <SectionHeading>Accommodation</SectionHeading>
+              <SectionHeading>{t('tours.modal.accommodation', 'Accommodation')}</SectionHeading>
               <div className="space-y-3">
                 {tour.accommodation.map((a) => (
                   <Card key={a.name} className="bg-white/5 border-white/10">
@@ -158,7 +161,7 @@ export default function TourModal({ tour, onClose }) {
 
             {/* Tour Guide */}
             <div>
-              <SectionHeading>Your Tour Guide</SectionHeading>
+              <SectionHeading>{t('tours.modal.yourGuide', 'Your Tour Guide')}</SectionHeading>
               <Card className="bg-white/5 border-white/10">
                 <CardContent className="p-5 flex gap-4">
                   <img
@@ -171,7 +174,7 @@ export default function TourModal({ tour, onClose }) {
                       <FaUser className="text-primary text-xs" />
                       {tour.guide.name}
                     </p>
-                    <p className="text-white/40 text-xs mt-0.5">{tour.guide.experience} experience</p>
+                    <p className="text-white/40 text-xs mt-0.5">{tour.guide.experience} {t('tours.modal.experience', 'experience')}</p>
                     <div className="flex items-center gap-1.5 mt-2 flex-wrap">
                       <FaGlobe className="text-white/30 text-xs" />
                       {tour.guide.languages.map((l) => (
@@ -189,7 +192,7 @@ export default function TourModal({ tour, onClose }) {
             {/* Included / Not included */}
             <div className="grid sm:grid-cols-2 gap-5">
               <div>
-                <SectionHeading>What's Included</SectionHeading>
+                <SectionHeading>{t('tours.modal.included', "What's Included")}</SectionHeading>
                 <div className="space-y-2">
                   {tour.included.map((item) => (
                     <div key={item} className="flex items-start gap-2 text-xs text-white/70">
@@ -200,7 +203,7 @@ export default function TourModal({ tour, onClose }) {
                 </div>
               </div>
               <div>
-                <SectionHeading>Not Included</SectionHeading>
+                <SectionHeading>{t('tours.modal.notIncluded', 'Not Included')}</SectionHeading>
                 <div className="space-y-2">
                   {tour.notIncluded.map((item) => (
                     <div key={item} className="flex items-start gap-2 text-xs text-white/60">
@@ -225,11 +228,11 @@ export default function TourModal({ tour, onClose }) {
             <div className="pb-6">
               <Button size="lg" className="w-full tracking-widest uppercase" asChild>
                 <a href={telegramUrl} target="_blank" rel="noopener noreferrer">
-                  <FaTelegramPlane /> Enquire &amp; Book on Telegram
+                  <FaTelegramPlane /> {t('tours.modal.book', 'Enquire & Book on Telegram')}
                 </a>
               </Button>
               <p className="text-center text-white/30 text-xs mt-3">
-                Our travel expert will respond within 2 hours on Telegram
+                {t('tours.modal.telegramNote', 'Our travel expert will respond within 2 hours on Telegram')}
               </p>
             </div>
           </div>

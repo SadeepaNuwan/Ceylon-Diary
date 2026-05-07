@@ -1,64 +1,46 @@
 import { useState } from 'react';
 import TourCard from './TourCard';
-import { tours } from '../data/tours';
-import { Button } from '@/components/ui/button';
+import { useTours } from '../data/tours';
+import { useTranslation } from 'react-i18next';
 import { Separator } from '@/components/ui/separator';
 
-const CATEGORIES = ['All', ...new Set(tours.filter((t) => !t.startDate?.toLowerCase().includes('coming soon')).map((t) => t.category))];
+export default function ToursSection({ onViewTour }) {
+  const { tours, CATEGORIES } = useTours();
+  const { t } = useTranslation();
+  const [activeCategory, setActiveCategory] = useState('all');
 
-export default function ToursSection({ onViewTour, searchQuery }) {
-  const [activeCategory, setActiveCategory] = useState('All');
-
-  const filtered = tours.filter((t) => {
-    const matchesCategory = activeCategory === 'All' || t.category === activeCategory;
-    const q = searchQuery?.toLowerCase() || '';
-    const matchesSearch =
-      !q ||
-      t.title.toLowerCase().includes(q) ||
-      t.region.toLowerCase().includes(q) ||
-      t.category.toLowerCase().includes(q) ||
-      t.tagline.toLowerCase().includes(q);
-    return matchesCategory && matchesSearch;
-  });
+  const filtered = tours.filter((tour) => activeCategory === 'all' || tour.categoryKey === activeCategory);
 
   return (
     <section id="tours" className="py-24 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Header */}
-        <div className="text-center mb-14">
-          <p className="text-primary text-xs tracking-[0.3em] uppercase font-medium mb-3">
-            Discover Sri Lanka
+        <div className="text-center mb-10 sm:mb-16">
+          <p className="text-primary text-xs tracking-[0.3em] uppercase font-medium mb-4">
+            {t('tours.tagline', 'Discover Sri Lanka')}
           </p>
-          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-            POPULAR TOURS
+          <h2 className="font-display text-4xl sm:text-5xl font-bold text-white mb-6">
+            {t('tours.title', 'POPULAR TOURS')}
           </h2>
           <Separator className="w-12 mx-auto bg-primary" />
         </div>
 
-        {/* Category filters */}
-        <div className="flex flex-wrap gap-2 justify-center mb-12 overflow-x-auto pb-2">
+        {/* Premium Category filters */}
+        <div className="flex gap-3 justify-start sm:justify-center mb-16 overflow-x-auto pb-4 scrollbar-hide sm:flex-wrap px-2">
           {CATEGORIES.map((cat) => (
-            <Button
-              key={cat}
-              variant={activeCategory === cat ? 'default' : 'outline'}
-              size="sm"
-              onClick={() => setActiveCategory(cat)}
-              className={`tracking-widest uppercase text-xs ${
-                activeCategory !== cat ? 'border-white/20 text-white/50 hover:text-white hover:border-white/50 hover:bg-transparent' : ''
+            <button
+              key={cat.key}
+              onClick={() => setActiveCategory(cat.key)}
+              className={`whitespace-nowrap px-6 py-2.5 rounded-full text-[10px] sm:text-xs tracking-[0.2em] uppercase font-semibold transition-all duration-500 ${
+                activeCategory === cat.key
+                  ? 'bg-primary text-white border-primary shadow-[0_0_25px_-5px_rgba(232,93,4,0.5)] scale-105'
+                  : 'bg-white/5 text-white/50 border border-white/10 hover:bg-white/10 hover:text-white hover:border-white/30'
               }`}
             >
-              {cat}
-            </Button>
+              {cat.label}
+            </button>
           ))}
         </div>
-
-        {/* Search result notice */}
-        {searchQuery && (
-          <p className="text-white/40 text-sm text-center mb-8">
-            Showing results for "<span className="text-white/70">{searchQuery}</span>"
-            {' '}— {filtered.length} tour{filtered.length !== 1 ? 's' : ''} found
-          </p>
-        )}
 
         {/* Grid */}
         {filtered.length > 0 ? (
@@ -71,7 +53,7 @@ export default function ToursSection({ onViewTour, searchQuery }) {
           </div>
         ) : (
           <div className="text-center py-20">
-            <p className="text-muted-foreground text-lg">No tours found. Try a different search.</p>
+            <p className="text-muted-foreground text-lg">{t('tours.search.empty', 'No tours found. Try a different search.')}</p>
           </div>
         )}
       </div>

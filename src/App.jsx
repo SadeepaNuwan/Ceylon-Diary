@@ -8,11 +8,11 @@ import GallerySection from './components/GallerySection';
 import TestimonialsSection from './components/TestimonialsSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
-import { tours } from './data/tours';
+import { useTours } from './data/tours';
 
 export default function App() {
   const [activeTourId, setActiveTourId] = useState(null);
-  const [searchQuery, setSearchQuery] = useState('');
+  const { tours } = useTours();
 
   const activeTour = tours.find((t) => t.id === activeTourId) ?? null;
 
@@ -21,17 +21,12 @@ export default function App() {
     window.scrollTo({ top: 0 });
   }
 
-  function handleSearch(q) {
-    setSearchQuery(q);
-    document.getElementById('tours')?.scrollIntoView({ behavior: 'smooth' });
-  }
-
   return (
     <div className="min-h-screen bg-[#0d0d0d]">
-      <Navbar onSearch={handleSearch} />
+      <Navbar />
       <Hero onViewTour={handleViewTour} />
       <InspireSection />
-      <ToursSection onViewTour={handleViewTour} searchQuery={searchQuery} />
+      <ToursSection onViewTour={handleViewTour} />
       <GallerySection />
       <TestimonialsSection />
       <ContactSection />
