@@ -50,13 +50,10 @@ export default function Hero({ onViewTour }) {
           </p>
 
           <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-[0.92] mb-5 max-w-4xl tracking-tight">
-            {t('hero.title1')}<br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/60">
-              {t('hero.title2')}
-            </span>
+            {slide.title}
           </h1>
 
-          <p className="text-white/70 text-sm sm:text-base md:text-lg mb-5 sm:mb-6 max-w-xl leading-relaxed">{t('hero.subtitle')}</p>
+          <p className="text-white/70 text-sm sm:text-base md:text-lg mb-5 sm:mb-6 max-w-xl leading-relaxed">{slide.subtitle}</p>
 
           <div className="flex flex-wrap items-center gap-5 mb-8">
             <span className="flex items-center gap-2 text-white/70 text-sm">
@@ -123,8 +120,8 @@ export default function Hero({ onViewTour }) {
               className={`px-6 text-left transition-colors hover:bg-white/5 ${i > 0 ? 'pl-6' : ''}`}
             >
               <p className="text-white/40 text-[10px] tracking-widest uppercase mb-1">{s.region}</p>
-              <p className={`text-xs font-medium leading-tight ${i === current ? 'text-white' : 'text-white/50'}`}>
-                {s.title.substring(0, 30)}
+                <p className={`text-xs font-medium leading-tight ${i === current ? 'text-white' : 'text-white/50'}`}>
+                {s.title}
               </p>
               <p className="text-primary text-[10px] mt-1 flex items-center gap-1">
                 <FaClock className="text-[9px]" />{s.duration}
