@@ -112,12 +112,12 @@ export default function Hero({ onViewTour }) {
 
       {/* Bottom info strip */}
       <div className="absolute bottom-0 left-0 right-0 border-t border-white/10 bg-black/40 backdrop-blur-sm hidden sm:block">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 grid grid-cols-3 divide-x divide-white/10">
-          {heroSlides.slice(0, 3).map((s, i) => (
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 grid grid-cols-4 divide-x divide-white/10">
+          {heroSlides.map((s, i) => (
             <button
               key={s.id}
               onClick={() => go(i)}
-              className={`px-6 text-left transition-colors hover:bg-white/5 ${i > 0 ? 'pl-6' : ''}`}
+              className={`px-4 lg:px-6 text-left transition-colors hover:bg-white/5 ${i > 0 ? 'pl-4 lg:pl-6' : ''}`}
             >
               <p className="text-white/40 text-[10px] tracking-widest uppercase mb-1">{s.region}</p>
                 <p className={`text-xs font-medium leading-tight ${i === current ? 'text-white' : 'text-white/50'}`}>
