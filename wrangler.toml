@@ -1,9 +1,6 @@
 name = "ceylon-diary"
-pages_build_configuration = {}
+pages_build_output_dir = "dist"
+compatibility_date = "2025-05-10"
 
 [build]
 command = "npm run build"
-cwd = "./"
-
-[build.upload]
-dir = "dist"
