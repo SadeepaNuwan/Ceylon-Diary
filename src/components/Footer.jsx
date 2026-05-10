@@ -15,11 +15,11 @@ export default function Footer() {
               <FaMapMarkerAlt className="text-primary text-xs" />
             </div>
             <span className="font-display text-transparent bg-clip-text bg-gradient-to-r from-white to-white/70 text-lg tracking-[0.2em] font-semibold">
-              CEYLON DIARY
+              CEYLON DREAMS
             </span>
           </div>
           <p className="text-white/30 text-xs text-center md:text-left">
-            © {new Date().getFullYear()} {t('footer.rights', 'Ceylon Diary Tours · Sri Lanka. All rights reserved.')}
+            © {new Date().getFullYear()} {t('footer.rights', 'Ceylon Dreams Tours · Sri Lanka. All rights reserved.')}
           </p>
           <div className="flex gap-6">
             {[

@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import ToursSection from './components/ToursSection';
@@ -13,6 +14,12 @@ import { useTours } from './data/tours';
 export default function App() {
   const [activeTourId, setActiveTourId] = useState(null);
   const { tours } = useTours();
+  const { t } = useTranslation();
+
+  // Update document title when language changes
+  useEffect(() => {
+    document.title = t('site.title', 'Ceylon Dreams');
+  }, [t]);
 
   const activeTour = tours.find((t) => t.id === activeTourId) ?? null;
 

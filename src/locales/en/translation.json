@@ -1,4 +1,7 @@
 {
+  "site": {
+    "title": "Ceylon Dreams"
+  },
   "nav": {
     "home": "Home",
     "about": "About",
@@ -107,7 +110,7 @@
     }
   },
   "footer": {
-    "rights": "Ceylon Diary Tours · Sri Lanka. All rights reserved.",
+    "rights": "Ceylon Dreams Tours · Sri Lanka. All rights reserved.",
     "links": {
       "privacy": "Privacy",
       "terms": "Terms",

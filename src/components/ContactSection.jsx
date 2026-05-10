@@ -30,8 +30,8 @@ export default function ContactSection() {
     {
       icon: FaPhoneAlt,
       label: t('contact.phone.label', 'Phone'),
-      sub: '+94 77 123 4567',
-      href: 'tel:+94771234567',
+      sub: '+79998310941',
+      href: 'tel:+79998310941',
       gradient: 'from-white/5 to-transparent',
       glow: 'group-hover:shadow-[0_0_40px_-10px_rgba(255,255,255,0.15)]',
       iconColor: 'text-white/80',

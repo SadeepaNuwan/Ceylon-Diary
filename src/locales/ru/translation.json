@@ -1,4 +1,7 @@
 {
+  "site": {
+    "title": "Шри-Ланка Мечты"
+  },
   "nav": {
     "home": "Главная",
     "about": "О нас",
@@ -107,7 +110,7 @@
     }
   },
   "footer": {
-    "rights": "Ceylon Diary Tours · Шри-Ланка. Все права защищены.",
+    "rights": "Ceylon Dreams Tours · Шри-Ланка. Все права защищены.",
     "links": {
       "privacy": "Конфиденциальность",
       "terms": "Условия",

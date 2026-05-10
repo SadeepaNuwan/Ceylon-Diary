@@ -49,8 +49,8 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between gap-4">
           {/* Logo */}
           <a href="#home" className="flex items-center gap-2 sm:gap-3 relative z-[60] min-w-0">
-            <img src={travelLogo} alt="Ceylon Diary" className="h-10 sm:h-14 w-auto shrink-0" style={{ filter: 'brightness(0) invert(1)', opacity: 0.95 }} />
-            <span className="font-display text-white text-lg sm:text-2xl tracking-widest font-semibold truncate">Ceylon Diary</span>
+            <img src={travelLogo} alt="Ceylon Dreams" className="h-10 sm:h-14 w-auto shrink-0" style={{ filter: 'brightness(0) invert(1)', opacity: 0.95 }} />
+            <span className="font-display text-white text-lg sm:text-2xl tracking-widest font-semibold truncate">Ceylon Dreams</span>
           </a>
 
           {/* Desktop nav */}
